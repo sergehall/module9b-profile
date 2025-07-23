@@ -1,13 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CS 81 JavaScript Programming – Assignments by Serge Hall</title>
+  <meta
+    name="description"
+    content="Assignments for CS 81 JavaScript Programming (Section 1240, Summer 2025) at Santa Monica College. Created by Serge Hall using React, Vite, and TypeScript."
+  />
+  <meta
+    name="keywords"
+    content="CS 81, JavaScript Programming, HTML, CSS, JavaScript, React, Vite, TypeScript, SMC, Serge Hall"
+  />
+  <meta name="author" content="Serge Hall" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/my-new-favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CS 81 – JavaScript Assignments" />
+  <meta
+    property="og:description"
+    content="Summer 2025 coursework for CS 81 at SMC. Projects and assignments by Serge Hall."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smc-2025-cs81-javascript-programming.vercel.app" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/89196074?v=4" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CS 81 – JavaScript Assignments" />
+  <meta
+    name="twitter:description"
+    content="Created by Serge Hall for CS 81 – JavaScript Programming, Santa Monica College."
+  />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/89196074?v=4" />
+</head>
+
+<body>
+<div id="root"></div>
+<script>
+  console.log('Your environment is ready!');
+</script>
+<!-- Footer Info -->
+<footer>
+  <p>
+    <strong>Student:</strong>
+    <a href="https://github.com/SergeHall" target="_blank">Serge Hall</a>
+  </p>
+  <p><strong>Course:</strong> CS 81 – JavaScript Programming</p>
+  <p>
+    <strong>Instructor:</strong> Vicky Tanya Seno –
+    <a href="mailto:seno_vicky@smc.edu">seno_vicky@smc.edu</a>
+  </p>
+  <p><strong>Institution:</strong> Santa Monica College • Summer 2025</p>
+</footer>
+
+<script type="module" src="/src/main.jsx"></script>
+<script>
+  let lastScrollY = window.scrollY;
+  const footer = document.querySelector("footer");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < lastScrollY) {
+
+      footer.classList.add("visible");
+    } else {
+
+      footer.classList.remove("visible");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+</body>
 </html>

@@ -1,0 +1,89 @@
+/* === Canvas Layout === */
+/* The main container wrapping the assignment header and content */
+.canvas {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+/* === Assignment Header === */
+/* Top section with the assignment title and description */
+.assignment-header {
+    flex: 1;
+    max-width: 1200px;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    color: #333333;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    background-color: #dbeafe;
+    border: 2px solid #cbd5e1;
+}
+
+/* === Profile Panel === */
+/* Container that holds all user profile cards */
+.profile-panel {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 32px;
+    background-color: #f0fff4;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+}
+
+/* === User Profile  === */
+/* Individual profile card component */
+.user-profile {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 24px;
+    color: #333333;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(181, 230, 204, 0.6);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    flex: 0 1 calc(50% - 24px);
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* === Responsive Behavior === */
+/* Make cards stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .user-profile {
+        flex: 1 1 100%;
+    }
+}
+
+/* === Profile Image === */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;              /* Makes image circular */
+    object-fit: cover;
+    border: 4px solid #f0fff4;
+    margin-bottom: 16px;
+}
+
+/* === Profile Name === */
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+/* === Profile Bio === */
+.profile-bio {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+}
