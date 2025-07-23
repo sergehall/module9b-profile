@@ -1,17 +1,24 @@
+import React, { useState } from 'react';
 import ContactCard from "./ContactCard.jsx";
 
 function UserProfileInline({ name, bio, image, email, github }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const containerStyle = {
     maxWidth: '400px',
     margin: '10px auto',
     padding: '24px',
     color: '#333333',
     borderRadius: '12px',
-    boxShadow: '0 4px 12px rgba(181, 230, 204, 0.6)',
+    boxShadow: isHovered
+      ? '0 4px 16px rgba(150, 200, 180, 0.9)'
+      : '0 4px 12px rgba(181, 230, 204, 0.6)',
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
     boxSizing: 'border-box',
-    backgroundColor: '#ffffff'
+    backgroundColor: isHovered ? '#f8fef9' : '#ffffff',
+    transition: 'box-shadow 0.3s ease, background-color 0.3s ease',
+    cursor: 'pointer'
   };
 
   const imageStyle = {
@@ -37,7 +44,11 @@ function UserProfileInline({ name, bio, image, email, github }) {
   };
 
   return (
-    <div style={containerStyle}>
+    <div
+      style={containerStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <img src={image} alt={`${name}'s profile`} style={imageStyle} />
       <h1 style={nameStyle}>{name}</h1>
       <p style={bioStyle}>{bio}</p>
