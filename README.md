@@ -1,12 +1,109 @@
-# React + Vite
+# CS81 Module 9B – Custom Profile Component with Inline Styling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of **Module 9 Assignment 9B** for Santa Monica College's CS81 JavaScript Programming course.  
+It demonstrates how to build reusable profile components in React using both **inline CSS styling** and **external class-based styles**, showcasing layout, props, and hover effects.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+This React app was created using Vite and renders a set of user profile cards using modular components.  
+Each profile includes an image, name, bio, and contact information (email + GitHub). The project demonstrates:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Usage of **inline CSS** (required by the assignment)
+- Dynamic rendering of profiles from external data
+- Modular component structure with props
+- Optional **hover effects** for interactive feedback
+- A second dataset with tech-relevant users
+
+Two profile components are available:
+- `UserProfileInline` — inline-styled version (used for assignment submission)
+- `UserProfile` — external CSS version (cleaner and more scalable)
+
+---
+
+## Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/sergehall/module9b-profile
+cd module9b-profile
+```
+
+2. **Install Node.js** (if not already installed)
+
+- Visit https://nodejs.org and download for your system.
+
+3. **Install dependencies**
+```bash
+npm install
+```
+4. **Start the development server**
+```bash
+npm run dev
+```
+
+## Repository Structure
+
+```
+.
+├── public/
+│   └── my-new-favicon.ico
+├── src/
+│   ├── assets/               # Optional assets folder (e.g. images)
+│   ├── components/
+│   │   ├── Assignment9A.jsx
+│   │   ├── AssignmentHeader.jsx
+│   │   ├── ContactCard.jsx
+│   │   ├── UserList.jsx
+│   │   ├── UserProfile.jsx             # CSS class-based version
+│   │   └── UserProfileInline.jsx      # Inline CSS version
+│   ├── data/
+│   │   ├── userProfiles.js            # Data from Module 9A
+│   │   └── frontendProfiles.js        # Updated tech-focused profiles for 9B
+│   ├── styles/
+│   │   └── styles.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## What I Learned
+
+- How to build and export modular React components
+- How to use props to pass dynamic content (name, image, bio, etc.)
+- How to use inline styles to control layout and appearance
+- How to implement hover interactions using useState
+- How to conditionally switch between data sets and components
+
+---
+
+## Challenges
+
+- Creating clean inline CSS that mimics external class-based styling
+- Implementing hover transitions without a stylesheet
+- Structuring consistent layout across cards with minimal duplication
+- Balancing assignment constraints with scalable component design
+
+---
+
+## Submission Requirements
+
+- [x] Inline-styled component (UserProfileInline)
+- [x] External stylesheet component (UserProfile) for comparison
+- [x] Contact section with email + GitHub using inline styling
+- [x] React map() rendering from imported data file
+- [x] Clean component structure and prop usage
+- [x] Hover effects on profile and links
+
+---
+
+## License
+
+This project is for educational use only as part of Santa Monica College's CS81 coursework.
