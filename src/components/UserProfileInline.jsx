@@ -16,7 +16,7 @@ function UserProfileInline({ name, bio, image, email, github }) {
     fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
     boxSizing: 'border-box',
-    backgroundColor: isHovered ? '#f8fef9' : '#ffffff',
+    backgroundColor: isHovered ? '#dbeafe' : '#ffffff',
     transition: 'box-shadow 0.3s ease, background-color 0.3s ease',
     cursor: 'pointer'
   };
