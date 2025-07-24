@@ -22,6 +22,19 @@ Two profile components are available:
 
 ---
 
+## Screenshot
+
+<details>
+  <summary> Click to view screenshot with comments</summary>
+
+A screenshot of your rendered UserProfile components (showing layout, styling, and ContactCard):
+
+![Screenshot of commented StudentCard.jsx](./screenshots/Module-9-Assignment-9B.png)
+
+</details>
+
+---
+
 ## Getting Started
 
 1. **Clone the repository**
